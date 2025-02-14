@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Blog preview card</title>
 
@@ -16,15 +18,49 @@
 </head>
 <body>
 
-  Learning
+  <main class="min-h-screen flex items-center justify-center yellow"> 
+    <div class="bg-white w-[327px] h-[501px] xs:w-sm xs:h-[522px] rounded-xl p-6 border-1 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] leading-[150%] tracking-[0px]">
+      <img src="./assets/images/illustration-article.svg" alt="Illustration of a blog post" class="w-full rounded-lg">
 
-  Published 21 Dec 2023
+      <div class="py-6">
+        <div class="yellow inline-block p-1 px-3 mb-3 rounded-md">
+          <p class="font-extrabold text-[14px]">
+            Learning
+          </p>
+        </div>
+      <p class=" text-[14px] mb-3">
+        Published 21 Dec 2023
+      </p>
+      
+      <h1 class="font-extrabold text-[24px] mb-3">
+        HTML & CSS foundations
+      </h1>
+      <p class="gray text-[16px]">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
+      </div>
+      <div class="flex items-center">
+      <img src="./assets/images/image-avatar.webp" alt="Author's profile picture" class="rounded-full w-[32px] mr-3">
+      <span> 
+        <p class="font-extrabold text-[14px]">
+          Greg Hooper
+      </p> 
+      </span>
+      </div>
 
-  HTML & CSS foundations
+      </div>
+  </div>
+  </main>
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+  
 
-  Greg Hooper
+  
+
+  
+
+  
+
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
