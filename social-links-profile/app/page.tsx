@@ -49,7 +49,7 @@ function Socials({socials} : {socials: string[]}) {
 
 function Social({socialname}: {socialname: string}) {
   return(
-    <div className="flex items-center justify-center rounded-lg text-[14px] bg-gray-700 p-3 font-semibold">
+    <div className="hover:bg-green hover:text-gray-800 flex items-center justify-center rounded-lg text-[14px] bg-gray-700 p-3 font-semibold">
       <p>{socialname}</p>
     </div>
    
