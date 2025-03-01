@@ -5,7 +5,7 @@ import "./globals.css";
 const youngSerif = Young_Serif({
   variable: "--font-young-serif",
   subsets: ["latin"],
-  weight: "400"
+  weight: ["400"]
 });
 
 const outfit = Outfit({
