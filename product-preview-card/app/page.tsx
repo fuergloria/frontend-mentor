@@ -52,7 +52,7 @@ function CardDetails() {
           $169.99
           </p>
       </div>
-      <button className="bg-green-500 text-white w-full rounded-lg flex items-center justify-center py-3.5 font-semibold text-sm">
+      <button className="hover:bg-green-700 bg-green-500 text-white w-full rounded-lg flex items-center justify-center py-3.5 font-semibold text-sm">
         <Image
         className="inline h-4 w-4 mr-3"
         src="/icon-cart.svg"

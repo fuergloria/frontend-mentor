@@ -4,12 +4,12 @@ import "./globals.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
-  subsets: ["san-serif"],
+  subsets: ["latin"],
 });
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
-  subsets: ["serif"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
