@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](/public/screenshot.png)
+![Screenshot](./public/screenshot.png)
 
 ### Links
 
@@ -48,3 +48,6 @@ Users should be able to:
 
 I learned more about responsive webdesign and how to use different Images for different screen sizes
 
+
+
+[screenshotRef]: /public/screenshot.png
