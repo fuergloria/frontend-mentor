@@ -2,7 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-cream py-6 px-4 min-h-screen flex items-center justify-center">
+    <div className="bg-cream py-6 px-4 min-h-screen flex items-center justify-center"
+    role="main">
       <Card />
     </div>
   )
@@ -10,7 +11,7 @@ export default function Home() {
 
 function Card() {
   return(
-    <div className="bg-white rounded-lg font-montserrat text-grey md:flex md:w-1/2">
+    <div className="bg-white rounded-lg font-montserrat text-grey md:flex md:w-1/3 ">
       <Image 
         className="rounded-t-lg md:hidden"
         src="/image-product-mobile.jpg"
@@ -33,11 +34,11 @@ function Card() {
 
 function CardDetails() {
   return(
-    <div className="p-7">
+    <div className="p-7 md:px-8">
       <h2 className="uppercase text-xs tracking-[.4em]">
         perfume
         </h2>
-      <h1 className="text-3xl font-bold font-fraunces text-black my-3">
+      <h1 className="text-3xl font-bold font-fraunces text-black my-3 md:mr-5 md:mb-5">
         Gabrielle Essence Eau De Parfum
         </h1>
       <p className="text-sm/5.5">
