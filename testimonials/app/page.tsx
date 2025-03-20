@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CLIFFORD, WALTERS, HARMON, ABRAMS, WHITTLE, COLOR_SCHEMES } from "./testimonials";
-import { text } from "stream/consumers";
 
 export interface Graduate {
   name: string;
