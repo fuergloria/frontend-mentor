@@ -122,7 +122,7 @@ export default function Home() {
   );
 }
 
-export function Graduate({ person }: { person: Graduate }) {
+function Graduate({ person }: { person: Graduate }) {
   
   const colorScheme = COLOR_SCHEMES[person.colorSchemeKey];
 
