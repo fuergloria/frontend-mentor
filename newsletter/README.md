@@ -1,0 +1,1 @@
+first problem: tailwind list-style-image hat nicht funktioniert - habe es stattdessen im css als background-image eingefügt
