@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function Success() {
 
@@ -10,6 +11,8 @@ export default function Success() {
   const email = searchParams.get("email");
 
     return(
+
+      <Suspense fallback={<div className="flex justify-center items-center min-h-screen bg-blue-800">Loading...</div>}>
 
       <div className="flex justify-center items-center min-h-screen bg-blue-800">
         <div className="p-5 mb-8 flex flex-col gap-4 bg-white min-h-screen md:min-h-0 md:h-100 md:w-100 rounded-lg md:p-10">
@@ -31,7 +34,7 @@ export default function Success() {
 
          </div>
     </div>
-        
+        </Suspense>
   
         
     )
