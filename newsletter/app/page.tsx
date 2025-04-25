@@ -77,7 +77,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
           </div>
 
           <input className={`p-4 border rounded-lg border-grey text-grey
-                             ${error && ("border-red placeholder:text-red")}`} 
+                             ${error && ("border-red text-red bg-red/18")}`} 
           id="email" type="email" placeholder="email@company.com" name="email"
                   onChange={(e) => setEmail(e.target.value)}/>
 
