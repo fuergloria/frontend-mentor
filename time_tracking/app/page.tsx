@@ -93,13 +93,13 @@ function OverviewCard({timeframe, setTimeframe}:{timeframe: 'daily' | 'weekly' |
                       md:justify-center md:gap-10 
                       xl:flex-col xl:justify-start xl:flex-1 xl:gap-4">
         {timeframes.map((tf) => (
-          <p
+          <button
             key={tf}
             className={tf === timeframe ? 'text-white cursor-pointer' : 'cursor-pointer'}
             onClick={() => setTimeframe(tf as 'daily' | 'weekly' | 'monthly')}
           >
             {tf.charAt(0).toUpperCase() + tf.slice(1)}
-          </p>
+          </button>
         ))}
       </div>
     </aside>
@@ -140,12 +140,14 @@ function CategoryCard({cat, timeframe}:{cat: timeframeData; timeframe: 'daily' |
       <div className="bg-navy-900 inset-x-0 bottom-0 rounded-md text-navy-200 p-4 flex flex-col justify-between z-10 flex-1 xl:p-7 xl:px-8 xl:justify-start xl:gap-3">
         <div className="flex justify-between items-center">
           <p className="text-white font-lg">{cat.title}</p>
+          <button aria-label="More options">
           <Image
             src="icon-ellipsis.svg"
             alt="More options"
             width={24}
             height={24}
           />
+          </button>
         </div>
         <div className="flex justify-between items-center md:flex-col md:items-start md:gap-2 xl:gap-4">
           <p className="text-3xl font-light text-white xl:text-6xl">{`${cat.timeframes[timeframe].current} hrs`}</p>
