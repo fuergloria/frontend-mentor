@@ -108,6 +108,9 @@ function TipSelector({updateData}: { updateData: UpdateData }){
   const predefinedTips = [5,10,15,25,50];
 
   const isCustomSelected = selectedTip !== null && !predefinedTips.includes(selectedTip);
+  const activeButtonClass = 'bg-green-400 text-green-900';
+  const inactiveButtonClass = 'bg-green-900 text-white hover:bg-green-200 hover:text-green-900';
+  const customInputClass = isCustomSelected ? 'bg-green-400 text-green-900' : 'bg-grey-50 text-center';
 
   return(
     <div>
@@ -121,8 +124,8 @@ function TipSelector({updateData}: { updateData: UpdateData }){
             className={`
               rounded-lg px-4 py-2
               ${selectedTip === tip 
-                ? 'bg-green-400 text-green-900' 
-                : 'bg-green-900 text-white hover:bg-green-200 hover:text-green-900'}`}
+                ? activeButtonClass 
+                : inactiveButtonClass}`}
             onClick={() => {
               setSelectedTip(tip);
               updateData({tipPercentage: tip});
@@ -136,7 +139,7 @@ function TipSelector({updateData}: { updateData: UpdateData }){
           id="custom-tip" 
           placeholder="Custom"
           value={isCustomSelected && selectedTip !== null ? selectedTip : ''}
-          className={`placeholder:text-grey-550 text-center rounded-lg ${isCustomSelected ? 'bg-green-400 text-green-900' : 'bg-grey-50'}`}
+          className={`placeholder:text-grey-550 text-center rounded-lg ${customInputClass}`}
           onChange={(e)=> {
             const value = e.target.value ? parseInt(e.target.value) : null;
             setSelectedTip(value);
@@ -154,7 +157,7 @@ function PeopleInput({updateData}: { updateData: UpdateData }){
   const[numberOfPeople, setNumberOfPeople] = React.useState<number | ''>('');
 
   const isfalseInput = numberOfPeople !== '' && numberOfPeople <= 0;
-
+  const customInputClass = isfalseInput ? 'border-orange-600' : (numberOfPeople !== '' ? 'border-green-400' : 'border-transparent');
 
 
   return(
@@ -180,7 +183,7 @@ function PeopleInput({updateData}: { updateData: UpdateData }){
           id="people" 
           placeholder="0" 
           className={`w-full bg-grey-50 text-right font-preset-3 px-4 py-1.5 rounded-lg placeholder:text-grey-300 text-green-900 border-2 focus:outline-none
-             ${isfalseInput ? 'border-orange-600' : (numberOfPeople !== '' ? 'border-green-400' : 'border-transparent') }`}
+             ${customInputClass}`}
           onChange ={(e) => {
             const value = e.target.value;
             setNumberOfPeople(value === '' ? '' : parseInt(value));
@@ -194,6 +197,9 @@ function PeopleInput({updateData}: { updateData: UpdateData }){
 }
 
 function TipCard({tip, total, isResetDisabled}: {tip: number | null, total: number | null, isResetDisabled: boolean}){
+
+  const customInputClass = isResetDisabled ? 'bg-green-750 text-green-800' : 'bg-green-400 text-green-900';
+
   return(
   <div className="bg-green-900 rounded-2xl p-6 flex flex-col gap-8 md:px-12 md:py-10 md:gap-2 md:justify-between
                   lg:p-8">
@@ -203,7 +209,7 @@ function TipCard({tip, total, isResetDisabled}: {tip: number | null, total: numb
     </div>
       
     <button className={` font-preset-4 px-8 py-2 rounded-lg text-center hover:bg-green-200 
-    ${!isResetDisabled ? 'bg-green-400 text-green-900' : 'bg-green-750 text-green-800'}`}
+    ${customInputClass}`}
             onClick={() => window.location.reload()} 
       >RESET</button>   
   </div>)
