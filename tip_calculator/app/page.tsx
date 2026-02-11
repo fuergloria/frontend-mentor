@@ -37,7 +37,7 @@ export default function Home() {
 
 
   return (
-  <main className="bg-grey-200 min-h-screen min-w-screen flex flex-col font-preset-2 px-20 lg:items-center lg:justify-center lg:gap-10">
+  <main className="bg-grey-200 min-h-screen flex flex-col font-preset-2 px-20 lg:items-center lg:justify-center lg:gap-10">
     <Image
       src="logo.svg"
       alt="Logo"
@@ -45,8 +45,8 @@ export default function Home() {
       height={53.14}
       className="mx-auto mt-10 mb-10"
     />
-    <div className="bg-white rounded-2xl py-8 px-6 grid grid-cols-1 gap-8 xl:grid-cols-2 md:px-20 md:py-12 md:aspect-[608/800] md:gap-12
-                    lg:w-[63.8888%] lg:aspect-[920/481]
+    <div className="bg-white rounded-2xl py-8 px-6 grid grid-cols-1 gap-8 xl:grid-cols-2 md:px-20 md:py-12  md:gap-12
+                    lg:max-w-[920px] lg:w-full 
                     lg:p-8">
       <Form updateData={updateData} />
       <TipCard tip={tipAmountPerPerson} total={totalPerPerson} isResetDisabled={isResetDisabled} />
